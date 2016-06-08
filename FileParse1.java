@@ -54,6 +54,7 @@ public void fileParse(File f) throws SAXException, IOException, ParserConfigurat
     Document doc = dbld.parse(f);
     doc.getDocumentElement().normalize();
     if(ieh.check == null){
+           System.out.println("The document is valid!");
            Element rootE= doc.getDocumentElement();
            Node name= rootE.getFirstChild();
            name=getFirstElementSibling(name); 
